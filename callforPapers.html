@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICDSCI</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+      .underline-green {
+        text-decoration: underline;
+        text-decoration-color: green;
+      }
+      .slideshow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        animation: slideShow 9s infinite;
+      }
+      .slide:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .slide:nth-child(2) {
+        animation-delay: 3s;
+      }
+      .slide:nth-child(3) {
+        animation-delay: 6s;
+      }
+    
+      @keyframes slideShow {
+        0% { opacity: 1; }
+        33% { opacity: 1; }
+        33.33% { opacity: 0; }
+        100% { opacity: 0; }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    
+      .animate-fadeIn {
+        animation: fadeIn 0.6s ease-out forwards;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 text-black text-justify">
+    <nav class="fixed w-full bg-gray-50 text-black py-3 z-50">
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <div class="flex items-center">
+          <img src="springer.png" alt="Springer Logo" class="h-10 mr-2" />
+          <a href="#" class="text-2xl font-bold">
+            <span class="bg-green-700 text-white px-2 py-1 rounded"
+              >ICDSCI</span
+            >
+            2025
+          </a>
+        </div>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="index.html" class="hover:text-green-400">Home</a></li>
+          <li>
+            <a href="callforPapers.html" class="text-green-400"
+              >Call for papers</a
+            >
+          </li>
+          <li>
+            <a href="#committees" class="hover:text-green-400">Committees</a>
+          </li>
+          <li>
+            <a href="registration.html" class="hover:text-green-400"
+              >Registration</a
+            >
+          </li>
+          <li>
+            <a href="sponsors.html" class="hover:text-green-400">Sponsors</a>
+          </li>
+          <li>
+            <a href="specialSessions.html" class="hover:text-green-400"
+              >Special sessions</a
+            >
+          </li>
+          <li><a href="index.html#contact" class="hover:text-green-400">Contact</a></li>
+        </ul>
+        <button
+          class="md:hidden text-green-400 focus:outline-none"
+          id="menu-button"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <ul
+        class="md:hidden flex flex-col space-y-2 px-4 pt-2 pb-4 bg-gray-100 hidden"
+        id="mobile-menu"
+      >
+        <li><a href="index.html" class="hover:text-green-400">Home</a></li>
+        <li>
+          <a href="callforPapers.html" class="text-green-400"
+            >Call for papers</a
+          >
+        </li>
+        <li>
+          <a href="#committees" class="hover:text-green-400">Committees</a>
+        </li>
+        <li>
+          <a href="registration.html" class="hover:text-green-400"
+            >Registration</a
+          >
+        </li>
+        <li>
+          <a href="sponsors.html" class="hover:text-green-400">Sponsors</a>
+        </li>
+        <li>
+          <a href="specialSessions.html" class="hover:text-green-400"
+            >Special sessions</a
+          >
+        </li>
+        <li><a href="index.html#contact" class="hover:text-green-400">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header class="h-[900px] md:h-[600px] text-center text-white bg-green-700 relative">
+      <div class="flex flex-col md:flex-row h-full relative z-10">
+        <div class="w-full md:w-1/2 px-4 py-24">
+          <div class="w-full md:w-1/2">
+            <img src="PSCMR.jpeg" class="md:hidden" alt="" />
+          </div>
+          <h1 class="text-4xl font-bold mb-2">
+            International Conference on Data Science and Computational Intelligence (ICDSCI)
+          </h1>
+          <h2 class="text-2xl mb-2">March 20-21, 2025</h2>
+          <h2 class="text-xl underline mb-4">Conference Proceedings</h2>
+          <h3 class="text-lg mb-4">
+            ALL ACCEPTED & PRESENTED papers will be published in SCOPUS indexed SPRINGER PROMS.
+          </h3>
+          <div class="flex justify-center space-x-4 mb-4">
+            <img src="springer.png" alt="Springer" class="h-36 w-36" />
+          </div>
+          <div class="button-container2"></div>
+          <button class="bg-gray-50 text-black px-4 py-2 rounded hover:bg-green-900 hover:text-white mb-5">
+            Submit Your Paper
+          </button>
+        </div>
+        <div class="w-full md:w-1/2 relative overflow-hidden">
+          <div class="slideshow">
+            <div class="slide" style="background-image: url('PSCMR.jpeg');"></div>
+            <div class="slide" style="background-image: url('pbarrage.jpg');"></div>
+            <div class="slide" style="background-image: url('DurgaTemple.jpg');"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="mt-1 bg">
+      <marquee behavior="" direction=""
+        >A virtual meeting is available for all registered authors who intend to
+        submit their work but are unable to attend the conference.</marquee
+      >
+    </div>
+
+    <section>
+      <div class="flex flex-wrap">
+        <div class="mt-5 ml-2">
+          <img
+            src="logo.png"
+            alt="pscmr-logo"
+            class="mb-4 ml-20"
+            style="max-width: 100%; height: 170px"
+          />
+          <p class="text-lg text-gray-700">
+            Potti Sriramulu Chalavadi Mallikarjuna Rao <br />
+            College of Engineering and Technology <br />
+            (Autonomous), Vijayawada
+          </p>
+        </div>
+        <div class="ml-2 md:ml-20">
+          <img
+            src="jslogo.png"
+            alt="js-logo"
+            class="mb-4"
+            style="max-width: 100%; height: 200px"
+          />
+          <p class="text-lg text-gray-700">
+            Jack Sparrow Publishers <br />
+            Private Limited
+          </p>
+        </div>
+        <div class=" m-2 md:ml-20 mt-5">
+          <div class="bg-gray-300 p-5 rounded-lg shadow-lg">
+            <h3 class="text-3xl font-bold mb-3">Important Dates</h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+              <h1 class="text-xl font-bold text-green-700">Submission Date - </h1>
+              <li>
+                <strong>Manuscript submissions open:</strong> September 1, 2024
+              </li>
+              <li>
+                <strong>Deadline for manuscript submissions:</strong> December 15, 2024
+              </li>
+              <h1 class="text-xl font-bold text-green-700">Review Process - </h1>
+              <li>
+                <strong>Under review timeline:</strong> December 15, 2024 - January 31, 2025
+              </li>
+              <li>
+                <strong>Notification of acceptance:</strong> February 05, 2025
+              </li>
+              <li>
+                <strong>Author registration deadline:</strong> February 06th to March 07th, 2025
+              </li>
+              <h1 class="text-xl font-bold text-green-700">Deadline for Final Papers - </h1>
+              
+              <li>
+                <strong>Conference program scheduled:</strong> March 20, 21st, 2025
+              </li>
+              <li>
+                <strong>Final revised manuscript:</strong> April 5, 2025
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document
+        .getElementById("menu-button")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+
+    <div class="bg-green-700 text-white text-center p-3">
+      <p class="font-bold text-2xl">ICDSCI 2025 Call for Papers</p>
+    </div>
+
+    <div class="bg-gray-100 text-center text-black p-3 md:p-10">
+      <p class="underline-green font-bold text-xl mb-2">About Conference</p>
+      <p class="text-justify">
+        International Conference on Data Science and Computational Intelligence
+        (ICDSCI) 2025 is a pivotal event that embodies the core elements of the
+        5th Industrial Revolution. The widespread application of data science is
+        revolutionizing products and services, significantly impacting labor
+        markets, economies, and societies globally. The event aims to gather
+        scientific and technical contributions across a broad spectrum of
+        models, tools, technologies, and applications in modern data science.
+        The conference will cover the full range of concepts from theoretical
+        foundations to practical implementations, including case studies,
+        works-in-progress, and conceptual explorations.
+      </p>
+    </div>
+
+    <section class="bg-gray-100 text-black p-3 md:p-10" id="objectives">
+      <p class="underline-green font-bold text-xl mb-4 text-center">
+        Objectives
+      </p>
+      <div class="text- mx-auto">
+        <p class="mb-4">The main objectives of ICAIS-2024 are to:</p>
+        <ul class="list-disc list-inside space-y-2">
+          <li>
+            Facilitate the dissemination of high-quality research findings and
+            innovative ideas in the field of intelligent systems.
+          </li>
+          <li>
+            Provide a forum for academics and industry professionals to share
+            their insights and experiences.
+          </li>
+          <li>
+            Encourage collaboration and networking among researchers,
+            practitioners, and policymakers.
+          </li>
+          <li>
+            Highlight the latest advancements and future directions in machine
+            learning, deep learning, IoT, healthcare technologies, computer
+            vision, and optimization techniques.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="bg-gray-100 text-center text-black p-3 md:p-10">
+      <p class="underline-green font-bold text-xl mb-4">
+        Important Dates / Deadlines
+      </p>
+      <div class="text-left mx-auto">
+        <table class="min-w-full border-collapse border border-gray-400">
+          <thead>
+            <tr class="bg-gray-300">
+              <th class="border border-gray-400 p-2">Event</th>
+              <th class="border border-gray-400 p-2">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-400 p-2">
+                Manuscript submissions open
+              </td>
+              <td class="border border-gray-400 p-2">September 1, 2024</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-400 p-2">
+                Deadline for Manuscript submissions
+              </td>
+              <td class="border border-gray-400 p-2">December 15, 2024</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-400 p-2">
+                Initial review and feedback
+              </td>
+              <td class="border border-gray-400 p-2">
+                December 15, 2024 - January 31, 2025
+              </td>
+            </tr>
+            <tr>
+              <td class="border border-gray-400 p-2">
+                Notification of acceptance
+              </td>
+              <td class="border border-gray-400 p-2">February 15, 2025</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-400 p-2">
+                Final revised manuscripts due
+              </td>
+              <td class="border border-gray-400 p-2">March 1, 2025</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-400 p-2">
+                Author registration deadline
+              </td>
+              <td class="border border-gray-400 p-2">March 7, 2025</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-400 p-2">
+                Conference program finalized
+              </td>
+              <td class="border border-gray-400 p-2">March 2, 2025</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <section class="bg-gray-100 text-black p-3 md:p-10" id="outcomes">
+      <p class="underline-green font-bold text-xl mb-4 text-center">Outcomes</p>
+      <p>
+        ICDSCI-2025 aims to make significant contributions to the field of Data
+        Science, promote collaboration, and drive innovation and progress in the
+        development and application of advanced technologies
+      </p>
+      <ul class="list-disc list-inside space-y-6 mt-8">
+        <li>
+          <b>Enhanced Knowledge and Skills:</b> <br />
+          Participants will gain a deeper understanding of the latest
+          advancements and trends in data science, big data analytics,
+          computational technologies, and related fields. Attendees will acquire
+          new skills through workshops, tutorials, and training sessions.
+        </li>
+
+        <li>
+          <b>Increased Collaboration: </b> <br />The conference will foster
+          collaborations between academia, industry, and government agencies,
+          leading to joint research projects and innovative solutions to complex
+          problems. Networking opportunities will help participants establish
+          new connections and partnerships.
+        </li>
+
+        <li>
+          <b>Publication of High-Quality Research:</b> <br />
+          The conference will serve as a platform for publishing high-quality
+          research papers, enhancing the body of knowledge in data science and
+          computational technologies. Selected papers will be featured in
+          reputed journals and conference proceedings.
+        </li>
+
+        <li>
+          <b>Showcasing Innovations: </b> <br />The latest innovations,
+          products, and technologies in data science and computational
+          technologies will be showcased, providing attendees with insights into
+          cutting-edge developments and industry trends. Participants will be
+          exposed to successful case studies and real-world implementations.
+        </li>
+
+        <li>
+          <b>Policy and Ethical Insights: </b> <br />Discussions on policy and
+          ethical considerations will provide valuable insights into the
+          responsible and sustainable development of data science and
+          computational technologies. Recommendations for policymakers will be
+          formulated to address the challenges and opportunities in the field.
+        </li>
+
+        <li>
+          <b>Problem-Solving and Thought Leadership: </b> <br />The conference
+          will provide a platform for addressing pressing challenges in the
+          field, leading to new ideas and solutions. Thought leaders and experts
+          will share their perspectives, driving forward-thinking discussions
+          and inspiring future research.
+        </li>
+
+        <li>
+          <b>Support for Early-Career Researchers:</b><br />
+          Opportunities for students and early-career professionals to present
+          their work and receive feedback from established experts. Mentoring
+          and guidance to nurture the next generation of innovators and
+          researchers.
+        </li>
+
+        <li>
+          <b>Enhanced Institutional Reputation:</b> <br />
+          Hosting the conference will enhance the reputation of the organizing
+          institution as a leading entity in the field of data science and
+          computational technologies. The conference will highlight the
+          institution's commitment to fostering innovation and research
+          excellence.
+        </li>
+
+        <li>
+          <b>Comprehensive Proceedings Book:</b> <br />
+          A comprehensive book of abstract proceedings will be published,
+          serving as a valuable resource for researchers and practitioners in
+          the field. The proceedings will document the key findings and
+          discussions from the conference, ensuring long-term impact.
+        </li>
+      </ul>
+    </section>
+
+    <section class="bg-gray-100 text-black p-3 md:p-10" id="scope">
+      <p class="underline-green font-bold text-xl mb-4 text-center">Scope</p>
+      <p>
+        <b
+          >ICAIS-2024 will cover a wide range of themes, focusing on the
+          following main areas:</b
+        >
+      </p>
+      <ul class="list-disc list-inside space-y-6 mt-8">
+        <li class="text-left">Data Science and it's Applications</li>
+        <li class="text-left">
+          Computational Intelligence and it's Applications
+        </li>
+        <li class="text-left">Data Science and Al Ethics</li>
+        <li class="text-left">Data Visualization and Interpretation</li>
+        <li class="text-left">Cloud Computing and Virtualization</li>
+        <li class="text-left">Software Engineering Practices</li>
+        <li class="text-left">Emerging Trends</li>
+        <li class="text-left">Industry Applications</li>
+      </ul>
+    </section>
+
+    <section class="bg-gray-100 text-black p-3 md:p-10" id="impact">
+      <p class="underline-green font-bold text-xl mb-4 text-center">
+        Anticipated Impacts
+      </p>
+      <p>
+        The International Conference on Data Science and Computational
+        Intelligence (ICDSCI) 2025 is poised to make a significant impact on the
+        field of data science and computational intelligence and beyond. ICDSCI
+        2025 is expected to have a profound and lasting impact on the
+        advancement of data science and computational intelligence, fostering
+        collaboration, innovation, and ethical development in this rapidly
+        evolving field. The anticipated impacts include:
+      </p>
+      <ul class="list-disc list-inside space-y-6 mt-8">
+        <li>
+          <b>Advancement of Research and Innovation:</b> <br />
+          ICDSCI 2025 will catalyze the development of new research ideas and
+          innovative solutions by providing a platform for the dissemination of
+          cutting-edge research and technological advancements. The conference
+          will drive forward the frontiers of knowledge in data analytics,
+          machine learning, big data, computational modeling, healthcare
+          applications, and optimization techniques.
+        </li>
+
+        <li>
+          <b>Strengthened Academic-Industry Collaboration:</b> <br />
+          The conference will foster stronger ties between academia and
+          industry, facilitating the translation of research into practical
+          applications. By bringing together researchers, practitioners, and
+          industry experts, ICDSCI 2025 will encourage collaborative projects
+          and partnerships that address real-world challenges and promote
+          technological advancements.
+        </li>
+
+        <li>
+          <b>Global Networking and Collaboration:</b> <br />
+          ICDSCI 2025 will serve as a global networking hub, connecting
+          professionals from diverse backgrounds and regions. This will enhance
+          international collaboration and exchange of ideas, leading to a more
+          integrated and collaborative global research community in the field of
+          data science and computational intelligence.
+        </li>
+
+        <li>
+          <b>Enhanced Educational Opportunities:</b> <br />
+          Through workshops, tutorials, and training sessions, ICDSCI 2025 will
+          provide valuable educational opportunities for participants. Students,
+          early-career researchers, and professionals will benefit from the
+          knowledge and expertise shared by leading experts, contributing to
+          their professional growth and skill development.
+        </li>
+
+        <li>
+          <b>Policy and Ethical Guidance:</b> <br />
+          The conference will address critical policy and ethical issues related
+          to the adoption and development of data science and computational
+          technologies. By highlighting these considerations, ICDSCI 2025 will
+          contribute to the formulation of guidelines and policies that ensure
+          the responsible and ethical use of advanced technologies.
+        </li>
+
+        <li>
+          <b
+            >Increased Visibility and Prestige for the Organizing
+            Institution:</b
+          >
+          <br />
+          Hosting ICDSCI 2025 will elevate the profile and prestige of the
+          organizing institution as a leading entity in the field of data
+          science and computational intelligence. The conference will showcase
+          the institution's commitment to academic excellence, research, and
+          innovation, attracting future collaborations and partnerships.
+        </li>
+
+        <li>
+          <b>Long-Term Knowledge Repository:</b> <br />
+          The publication of the conference proceedings will create a long-term
+          repository of knowledge, documenting the latest research findings and
+          discussions. This will serve as a valuable resource for researchers,
+          practitioners, and policymakers, ensuring the sustained impact of
+          ICDSCI 2025 on the field.
+        </li>
+
+        <li>
+          <b>Inspiration for Future Research:</b> <br />
+          The insights and discussions at ICDSCI 2025 will inspire future
+          research directions and projects. By highlighting emerging trends and
+          challenges, the conference will set the agenda for future
+          investigations and developments in data science and computational
+          intelligence.
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
